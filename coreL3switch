@@ -39,7 +39,18 @@ name QMPV GUEST
 vlan 310
 name CALICRAFT GUEST
 
-interface vlan ip address 
+interface vlan 2
+ip address x.x.x.x x.x.x.x
+interface vlan 10
+interface vlan 20
+interface vlan 30
+interface vlan 40
+interface vlan 88
+interface vlan 100
+interface vlan 200
+interface vlan 300
+interface vlan 310
+
 stp
 vlan
 interface
