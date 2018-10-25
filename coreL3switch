@@ -1,0 +1,20 @@
+en
+conf t
+ip routing
+ip subnet-zero
+no ip domain-lookup
+ip domain-name quickmountpv.com
+crypto key generate rsa
+1024
+
+banner motd
+
+line vty 0 15
+transport input ssh
+login ?
+no exec-timeout
+
+interface vlan ip address
+stp
+vlan
+interface
