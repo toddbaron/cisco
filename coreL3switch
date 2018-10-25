@@ -1,5 +1,5 @@
-en
-conf t
+enable
+configure terminal
 ip routing
 ip subnet-zero
 no ip domain-lookup
@@ -12,9 +12,34 @@ banner motd
 line vty 0 15
 transport input ssh
 login ?
-no exec-timeout
+exec-timeout 15 0
 
-interface vlan ip address
+
+configure terminal
+vlan 2
+name FIREWALLUPLINK
+vlan 10
+name MGMT
+vlan 20
+name SERVERS
+vlan 30
+name PRINT
+vlan 40
+name VIDEO
+vlan 88
+name VOICE
+vlan 99
+name DMZ
+vlan 100
+name QMPV CORP
+vlan 200
+name CALICRAFT CORP
+vlan 300
+name QMPV GUEST
+vlan 310
+name CALICRAFT GUEST
+
+interface vlan ip address 
 stp
 vlan
 interface
