@@ -40,16 +40,25 @@ vlan 310
 name CALICRAFT GUEST
 
 interface vlan 2
-ip address x.x.x.x x.x.x.x
+ip address 10.100.0.1 255.255.255.252
 interface vlan 10
+ip address 10.10.0.1 255.255.255.0
 interface vlan 20
+ip address 10.10.1.0 255.255.255.0
 interface vlan 30
+ip address 10.10.2.1 255.255.255.128
 interface vlan 40
+ip address 10.10.2.129 255.255.255.128
 interface vlan 88
+ip address 10.190.88.1 255.255.255.0
 interface vlan 100
+ip address 10.0.0.1 255.255.255.0
 interface vlan 200
+ip addres 172.16.32.1 255.255.255.0
 interface vlan 300
+ip address 172.16.0.1 255.255.255.0
 interface vlan 310
+ip address 172.16.1.1 255.255.255.0
 
 stp
 vlan
