@@ -18,6 +18,7 @@ login ?
 exec-timeout 15 0
 
 
+
 configure terminal
 vlan 2
 name FIREWALLUPLINK
@@ -42,27 +43,48 @@ name QMPV GUEST
 vlan 310
 name CALICRAFT GUEST
 
+configure terminal
+spanning-tree vlan 1-999 priority 4096
+
+configure terminal
+ip route 0.0.0.0 0.0.0.0 10.100.0.2
+
 interface vlan 2
+description FIREWALLUPLINK
 ip address 10.100.0.1 255.255.255.252
 interface vlan 10
+description MGMT
 ip address 10.10.0.1 255.255.255.0
+ip helper-address x.x.x.x
 interface vlan 20
+description SERVERS
 ip address 10.10.1.0 255.255.255.0
+ip helper-address x.x.x.x
 interface vlan 30
+description PRINT
 ip address 10.10.2.1 255.255.255.128
+ip helper-address x.x.x.x
 interface vlan 40
+description VIDEO
 ip address 10.10.2.129 255.255.255.128
+ip helper-address x.x.x.x
 interface vlan 88
+description VOICE
 ip address 10.190.88.1 255.255.255.0
+ip helper-address x.x.x.x
 interface vlan 100
+description QMPV CORP
 ip address 10.0.0.1 255.255.255.0
+ip helper-address x.x.x.x
 interface vlan 200
+description CALICRAFT CORP
 ip addres 172.16.32.1 255.255.255.0
+ip helper-address x.x.x.x
 interface vlan 300
+description QMPV GUEST
 ip address 172.16.0.1 255.255.255.0
+ip helper-address x.x.x.x
 interface vlan 310
+description CALICRAFT GUEST
 ip address 172.16.1.1 255.255.255.0
-
-
-
-stp
+ip helper-address x.x.x.x
