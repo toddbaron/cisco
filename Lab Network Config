@@ -1,5 +1,12 @@
 #### L3 Switch Config ####
 
+en
+configure terminal
+line console 0
+logging synchronous
+no exec-timeout
+exit
+
 ip routing
 
 vlan 2
@@ -66,8 +73,142 @@ interface GigabitEthernet 1/0/3
 switchport trunk encapsulation dot1q
 switchport mode trunk
 
-####Switch1 Config####
-####Switch1 Config####
-####Switch1 Config####
-####Switch1 Config####
-####Switch1 Config####
+interface GigabitEthernet 1/0/4
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+####MDF Switch1 Config####
+
+en
+configure terminal
+line console 0
+logging synchronous
+no exec-timeout
+exit
+
+vlan 10
+name MGMT
+vlan 20
+name SERVERS
+vlan 30
+name PRINTERS
+vlan 40
+name VIDEO
+VLAN 50
+NAME HVAC
+VLAN 60
+NAME AV
+vlan 200
+name FACSTAFF
+vlan 210
+name PUBLICWIFI
+vlan 220
+name CHROME
+vlan 230
+name APPLE
+
+interface GigabitEthernet 1/1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+####MDF Switch2 Config####
+
+en
+configure terminal
+line console 0
+logging synchronous
+no exec-timeout
+exit
+
+vlan 10
+name MGMT
+vlan 20
+name SERVERS
+vlan 30
+name PRINTERS
+vlan 40
+name VIDEO
+VLAN 50
+NAME HVAC
+VLAN 60
+NAME AV
+vlan 200
+name FACSTAFF
+vlan 210
+name PUBLICWIFI
+vlan 220
+name CHROME
+vlan 230
+name APPLE
+
+interface GigabitEthernet 1/1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+####MDF Switch3 Config####
+
+en
+configure terminal
+line console 0
+logging synchronous
+no exec-timeout
+exit
+
+vlan 10
+name MGMT
+vlan 20
+name SERVERS
+vlan 30
+name PRINTERS
+vlan 40
+name VIDEO
+VLAN 50
+NAME HVAC
+VLAN 60
+NAME AV
+vlan 200
+name FACSTAFF
+vlan 210
+name PUBLICWIFI
+vlan 220
+name CHROME
+vlan 230
+name APPLE
+
+interface GigabitEthernet 1/1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+####IDF-A Switch0 Config####
+
+en
+configure terminal
+line console 0
+logging synchronous
+no exec-timeout
+exit
+
+vlan 10
+name MGMT
+vlan 20
+name SERVERS
+vlan 30
+name PRINTERS
+vlan 40
+name VIDEO
+VLAN 50
+NAME HVAC
+VLAN 60
+NAME AV
+vlan 200
+name FACSTAFF
+vlan 210
+name PUBLICWIFI
+vlan 220
+name CHROME
+vlan 230
+name APPLE
+
+interface GigabitEthernet 1/1/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
