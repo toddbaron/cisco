@@ -1,4 +1,16 @@
-#### L3 Switch Config ####
+*****ASA Config*****
+en
+
+configure terminal
+interface vlan 
+ip address 192.168.0.2 255.255.255.252
+exit
+
+interface ethernet 0/1
+switchport mode access
+switchport access vlan 2
+
+*****L3 Switch Config*****
 
 en
 configure terminal
@@ -77,7 +89,7 @@ interface GigabitEthernet 1/0/4
 switchport trunk encapsulation dot1q
 switchport mode trunk
 
-####MDF Switch1 Config####
+*****MDF Switch1 Config*****
 
 en
 configure terminal
@@ -111,7 +123,7 @@ interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 
-####MDF Switch2 Config####
+*****MDF Switch2 Config*****
 
 en
 configure terminal
@@ -145,7 +157,7 @@ interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 
-####MDF Switch3 Config####
+*****MDF Switch3 Config*****
 
 en
 configure terminal
@@ -179,7 +191,7 @@ interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 
-####IDF-A Switch0 Config####
+*****IDF-A Switch0 Config*****
 
 en
 configure terminal
