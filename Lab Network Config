@@ -1,0 +1,73 @@
+#### L3 Switch Config ####
+
+ip routing
+
+vlan 2
+name WANLINK
+vlan 10
+name MGMT
+vlan 20
+name SERVERS
+vlan 30
+name PRINTERS
+vlan 40
+name VIDEO
+VLAN 50
+NAME HVAC
+VLAN 60
+NAME AV
+vlan 200
+name FACSTAFF
+vlan 210
+name PUBLICWIFI
+vlan 220
+name CHROME
+vlan 230
+name APPLE
+
+interface vlan 1
+ip address 10.0.5.1 255.255.255.192
+interface vlan 2
+ip address 192.168.0.1 255.255.255.252
+interface vlan 10
+ip address 10.0.5.65 255.255.255.224
+interface vlan 20
+ip address 10.0.5.97 255.255.255.224
+interface vlan 30
+ip address 10.0.5.129 255.255.255.224
+interface vlan 40
+ip address 10.0.4.129 255.255.255.128
+interface vlan 50
+ip address 10.0.5.161 255.255.255.240
+interface vlan 60
+ip address 10.0.4.1 255.255.255.128
+interface vlan 200
+ip address 10.0.2.1 255.255.255.0
+interface vlan 210
+ip address 172.16.0.1 255.255.252.0
+interface vlan 220
+ip address 10.0.0.1 255.255.254.0
+interface vlan 230
+ip address 10.0.3.1 255.255.255.0
+
+interface GigabitEthernet 1/1/1
+switchport mode access
+switchport access vlan 2
+
+interface GigabitEthernet 1/0/1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+interface GigabitEthernet 1/0/2
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+interface GigabitEthernet 1/0/3
+switchport trunk encapsulation dot1q
+switchport mode trunk
+
+####Switch1 Config####
+####Switch1 Config####
+####Switch1 Config####
+####Switch1 Config####
+####Switch1 Config####
