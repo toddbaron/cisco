@@ -107,6 +107,9 @@ name CHROME
 vlan 230
 name APPLE
 
+interface vlan 10
+ip address 10.0.5.66 255.255.255.224
+
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
@@ -141,6 +144,9 @@ name CHROME
 vlan 230
 name APPLE
 
+interface vlan 10
+ip address 10.0.5.67 255.255.255.224
+
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
@@ -174,6 +180,9 @@ vlan 220
 name CHROME
 vlan 230
 name APPLE
+
+interface vlan 10
+ip address 10.0.5.68 255.255.255.224
 
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
@@ -210,6 +219,9 @@ vlan 230
 name APPLE
 exit
 
+interface vlan 10
+ip address 10.0.5.69 255.255.255.224
+
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
@@ -240,6 +252,9 @@ vlan 220
 name CHROME
 vlan 230
 name APPLE
+
+interface vlan 10
+ip address 10.0.5.70 255.255.255.224
 
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
@@ -276,6 +291,9 @@ vlan 230
 name APPLE
 exit
 
+interface vlan 10
+ip address 10.0.5.71 255.255.255.224
+
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
 switchport mode trunk
@@ -310,6 +328,9 @@ name CHROME
 vlan 230
 name APPLE
 exit
+
+interface vlan 10
+ip address 10.0.5.72 255.255.255.224
 
 interface GigabitEthernet 1/1/1
 switchport trunk encapsulation dot1q
